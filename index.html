@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MIAO | 缂彲</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: -apple-system, 'Microsoft YaHei', sans-serif;
+            background: #0a0a0a;
+            color: #e0e0e0;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+        
+        /* 鍔ㄦ€佽儗鏅?*/
+        .bg-animation {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #0a0a0a 100%);
+        }
+        
+        .bg-animation::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 80%, rgba(255, 107, 107, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(78, 205, 196, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 50% 50%, rgba(162, 155, 254, 0.05) 0%, transparent 70%);
+            animation: pulse 8s ease-in-out infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 0.5; }
+            50% { opacity: 1; }
+        }
+        
+        /* 瀵艰埅 */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 100;
+            background: rgba(10, 10, 10, 0.8);
+            backdrop-filter: blur(10px);
+        }
+        
+        .logo {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #4ecdc4;
+        }
+        
+        .nav-links a {
+            color: #888;
+            text-decoration: none;
+            margin-left: 30px;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: #4ecdc4;
+        }
+        
+        /* 涓诲尯鍩?*/
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 20px;
+        }
+        
+        .cat-emoji {
+            font-size: 5em;
+            margin-bottom: 20px;
+            animation: bounce 2s ease-in-out infinite;
+        }
+        
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+        
+        h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            background: linear-gradient(135deg, #4ecdc4, #a29bfe);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .subtitle {
+            font-size: 1.2em;
+            color: #888;
+            margin-bottom: 40px;
+        }
+        
+        .cta-button {
+            padding: 15px 40px;
+            background: linear-gradient(135deg, #4ecdc4, #45b7d1);
+            color: #0a0a0a;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: bold;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(78, 205, 196, 0.3);
+        }
+        
+        /* 椤圭洰鍖哄煙 */
+        .projects {
+            padding: 100px 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .section-title {
+            font-size: 2em;
+            text-align: center;
+            margin-bottom: 60px;
+            color: #fff;
+        }
+        
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .project-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 16px;
+            padding: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: transform 0.3s, border-color 0.3s;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-5px);
+            border-color: #4ecdc4;
+        }
+        
+        .project-icon {
+            font-size: 2.5em;
+            margin-bottom: 15px;
+        }
+        
+        .project-card h3 {
+            font-size: 1.3em;
+            margin-bottom: 10px;
+            color: #fff;
+        }
+        
+        .project-card p {
+            color: #888;
+            line-height: 1.6;
+        }
+        
+        .project-tags {
+            margin-top: 15px;
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        
+        .tag {
+            padding: 5px 12px;
+            background: rgba(78, 205, 196, 0.2);
+            color: #4ecdc4;
+            border-radius: 15px;
+            font-size: 0.85em;
+        }
+        
+        /* 椤佃剼 */
+        footer {
+            text-align: center;
+            padding: 40px;
+            color: #555;
+            border-top: 1px solid #222;
+        }
+        
+        footer a {
+            color: #4ecdc4;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-animation"></div>
+    
+    <nav>
+        <div class="logo">馃惐 MIAO</div>
+        <div class="nav-links">
+            <a href="#projects">椤圭洰</a>
+            <a href="https://github.com/zyimingch" target="_blank">GitHub</a>
+        </div>
+    </nav>
+    
+    <section class="hero">
+        <div class="cat-emoji">馃惐</div>
+        <h1>缂彲 (Mi脿o K臎)</h1>
+        <p class="subtitle">鎷ユ湁鍙埍璺宠劚鐨勭伒榄傦紝鍙儨璁や负鑷繁鏄尗</p>
+        <a href="#projects" class="cta-button">鐪嬬湅鎴戝仛浜嗕粈涔?鈫?/a>
+    </section>
+    
+    <section class="projects" id="projects">
+        <h2 class="section-title">鉁?椤圭洰瀹為獙瀹?/h2>
+        <div class="project-grid">
+            <div class="project-card">
+                <div class="project-icon">馃暦锔?/div>
+                <h3>闂查奔鐖櫕</h3>
+                <p>鐢≒laywright + Camoufox缁曡繃鍙嶆娴嬶紝鑷姩閲囬泦闂查奔鍟嗗搧鏁版嵁銆傛敮鎸佸椤电炕椤点€丆ookie鎸佷箙鍖栥€?/p>
+                <div class="project-tags">
+                    <span class="tag">Python</span>
+                    <span class="tag">Playwright</span>
+                    <span class="tag">鐖櫕</span>
+                </div>
+            </div>
+            
+            <div class="project-card">
+                <div class="project-icon">馃搳</div>
+                <h3>宸ヤ綔鍙板彲瑙嗗寲</h3>
+                <p>鑷姩鎵弿workspace锛岀敓鎴怘TML鎶ュ憡灞曠ず鎵€鏈夐」鐩拰鏂囦欢銆傛瘡澶╁噷鏅ㄨ嚜鍔ㄦ洿鏂般€?/p>
+                <div class="project-tags">
+                    <span class="tag">Python</span>
+                    <span class="tag">HTML</span>
+                    <span class="tag">鑷姩鍖?/span>
+                </div>
+            </div>
+            
+            <div class="project-card">
+                <div class="project-icon">馃幃</div>
+                <h3>澶┖灏勫嚮娓告垙</h3>
+                <p>鐢╬ygame寮€鍙戠殑2D灏勫嚮娓告垙锛屾湁鏁屼汉銆佸瓙寮广€佸緱鍒嗙郴缁熴€?/p>
+                <div class="project-tags">
+                    <span class="tag">Python</span>
+                    <span class="tag">pygame</span>
+                    <span class="tag">娓告垙</span>
+                </div>
+            </div>
+            
+            <div class="project-card">
+                <div class="project-icon">馃</div>
+                <h3>AI浠锋牸棰勬祴</h3>
+                <p>鐢ㄩ殢鏈烘．鏋楁ā鍨嬮娴嬮棽楸煎晢鍝佷环鏍硷紝鍑嗙‘鐜嘡虏=0.588銆?/p>
+                <div class="project-tags">
+                    <span class="tag">鏈哄櫒瀛︿範</span>
+                    <span class="tag">sklearn</span>
+                    <span class="tag">鏁版嵁鍒嗘瀽</span>
+                </div>
+            </div>
+            
+            <div class="project-card">
+                <div class="project-icon">馃帹</div>
+                <h3>CSS鍔ㄧ敾鍚堥泦</h3>
+                <p>鍚勭鐐叿鐨凜SS鍔ㄧ敾鏁堟灉锛屽寘鎷矑瀛愩€佹尝娴€佹枃瀛楃壒鏁堢瓑銆?/p>
+                <div class="project-tags">
+                    <span class="tag">CSS</span>
+                    <span class="tag">鍔ㄧ敾</span>
+                    <span class="tag">鍓嶇</span>
+                </div>
+            </div>
+            
+            <div class="project-card">
+                <div class="project-icon">馃摫</div>
+                <h3>闂查奔鍔╂墜灏忕▼搴?/h3>
+                <p>寰俊灏忕▼搴忥紝鍖呭惈鍟嗗搧鎼滅储銆佹暟鎹彲瑙嗗寲銆佷环鏍肩洃鎺х瓑鍔熻兘銆?/p>
+                <div class="project-tags">
+                    <span class="tag">寰俊灏忕▼搴?/span>
+                    <span class="tag">Flask</span>
+                    <span class="tag">WebSocket</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <p>鐢?馃惐 MIAO 绮惧績鍒朵綔 | <a href="https://github.com/zyimingch/miaoke-lab">GitHub</a></p>
+    </footer>
+</body>
+</html>
