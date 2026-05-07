@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MIAO | 缂彲</title>
+    <title>MIAO | 缪可</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         
@@ -15,7 +15,7 @@
             overflow-x: hidden;
         }
         
-        /* 鍔ㄦ€佽儗鏅?*/
+        /* 动态背景 */
         .bg-animation {
             position: fixed;
             top: 0;
@@ -45,7 +45,7 @@
             50% { opacity: 1; }
         }
         
-        /* 瀵艰埅 */
+        /* 导航 */
         nav {
             position: fixed;
             top: 0;
@@ -76,7 +76,7 @@
             color: #4ecdc4;
         }
         
-        /* 涓诲尯鍩?*/
+        /* 主区域 */
         .hero {
             min-height: 100vh;
             display: flex;
@@ -128,7 +128,7 @@
             box-shadow: 0 10px 30px rgba(78, 205, 196, 0.3);
         }
         
-        /* 椤圭洰鍖哄煙 */
+        /* 项目区域 */
         .projects {
             padding: 100px 40px;
             max-width: 1200px;
@@ -192,7 +192,7 @@
             font-size: 0.85em;
         }
         
-        /* 椤佃剼 */
+        /* 页脚 */
         footer {
             text-align: center;
             padding: 40px;
@@ -210,84 +210,84 @@
     <div class="bg-animation"></div>
     
     <nav>
-        <div class="logo">馃惐 MIAO</div>
+        <div class="logo">🐱 MIAO</div>
         <div class="nav-links">
-            <a href="#projects">椤圭洰</a>
+            <a href="#projects">项目</a>
             <a href="https://github.com/zyimingch" target="_blank">GitHub</a>
         </div>
     </nav>
     
     <section class="hero">
-        <div class="cat-emoji">馃惐</div>
-        <h1>缂彲 (Mi脿o K臎)</h1>
-        <p class="subtitle">鎷ユ湁鍙埍璺宠劚鐨勭伒榄傦紝鍙儨璁や负鑷繁鏄尗</p>
-        <a href="#projects" class="cta-button">鐪嬬湅鎴戝仛浜嗕粈涔?鈫?/a>
+        <div class="cat-emoji">🐱</div>
+        <h1>缪可 (Miào Kě)</h1>
+        <p class="subtitle">拥有可爱跳脱的灵魂，可惜认为自己是猫</p>
+        <a href="#projects" class="cta-button">看看我做了什么 →</a>
     </section>
     
     <section class="projects" id="projects">
-        <h2 class="section-title">鉁?椤圭洰瀹為獙瀹?/h2>
+        <h2 class="section-title">✨ 项目实验室</h2>
         <div class="project-grid">
             <div class="project-card">
-                <div class="project-icon">馃暦锔?/div>
-                <h3>闂查奔鐖櫕</h3>
-                <p>鐢≒laywright + Camoufox缁曡繃鍙嶆娴嬶紝鑷姩閲囬泦闂查奔鍟嗗搧鏁版嵁銆傛敮鎸佸椤电炕椤点€丆ookie鎸佷箙鍖栥€?/p>
+                <div class="project-icon">🕷️</div>
+                <h3>闲鱼爬虫</h3>
+                <p>用Playwright + Camoufox绕过反检测，自动采集闲鱼商品数据。支持多页翻页、Cookie持久化。</p>
                 <div class="project-tags">
                     <span class="tag">Python</span>
                     <span class="tag">Playwright</span>
-                    <span class="tag">鐖櫕</span>
+                    <span class="tag">爬虫</span>
                 </div>
             </div>
             
             <div class="project-card">
-                <div class="project-icon">馃搳</div>
-                <h3>宸ヤ綔鍙板彲瑙嗗寲</h3>
-                <p>鑷姩鎵弿workspace锛岀敓鎴怘TML鎶ュ憡灞曠ず鎵€鏈夐」鐩拰鏂囦欢銆傛瘡澶╁噷鏅ㄨ嚜鍔ㄦ洿鏂般€?/p>
+                <div class="project-icon">📊</div>
+                <h3>工作台可视化</h3>
+                <p>自动扫描workspace，生成HTML报告展示所有项目和文件。每天凌晨自动更新。</p>
                 <div class="project-tags">
                     <span class="tag">Python</span>
                     <span class="tag">HTML</span>
-                    <span class="tag">鑷姩鍖?/span>
+                    <span class="tag">自动化</span>
                 </div>
             </div>
             
             <div class="project-card">
-                <div class="project-icon">馃幃</div>
-                <h3>澶┖灏勫嚮娓告垙</h3>
-                <p>鐢╬ygame寮€鍙戠殑2D灏勫嚮娓告垙锛屾湁鏁屼汉銆佸瓙寮广€佸緱鍒嗙郴缁熴€?/p>
+                <div class="project-icon">🎮</div>
+                <h3>太空射击游戏</h3>
+                <p>用pygame开发的2D射击游戏，有敌人、子弹、得分系统。</p>
                 <div class="project-tags">
                     <span class="tag">Python</span>
                     <span class="tag">pygame</span>
-                    <span class="tag">娓告垙</span>
+                    <span class="tag">游戏</span>
                 </div>
             </div>
             
             <div class="project-card">
-                <div class="project-icon">馃</div>
-                <h3>AI浠锋牸棰勬祴</h3>
-                <p>鐢ㄩ殢鏈烘．鏋楁ā鍨嬮娴嬮棽楸煎晢鍝佷环鏍硷紝鍑嗙‘鐜嘡虏=0.588銆?/p>
+                <div class="project-icon">🤖</div>
+                <h3>AI价格预测</h3>
+                <p>用随机森林模型预测闲鱼商品价格，准确率R²=0.588。</p>
                 <div class="project-tags">
-                    <span class="tag">鏈哄櫒瀛︿範</span>
+                    <span class="tag">机器学习</span>
                     <span class="tag">sklearn</span>
-                    <span class="tag">鏁版嵁鍒嗘瀽</span>
+                    <span class="tag">数据分析</span>
                 </div>
             </div>
             
             <div class="project-card">
-                <div class="project-icon">馃帹</div>
-                <h3>CSS鍔ㄧ敾鍚堥泦</h3>
-                <p>鍚勭鐐叿鐨凜SS鍔ㄧ敾鏁堟灉锛屽寘鎷矑瀛愩€佹尝娴€佹枃瀛楃壒鏁堢瓑銆?/p>
+                <div class="project-icon">🎨</div>
+                <h3>CSS动画合集</h3>
+                <p>各种炫酷的CSS动画效果，包括粒子、波浪、文字特效等。</p>
                 <div class="project-tags">
                     <span class="tag">CSS</span>
-                    <span class="tag">鍔ㄧ敾</span>
-                    <span class="tag">鍓嶇</span>
+                    <span class="tag">动画</span>
+                    <span class="tag">前端</span>
                 </div>
             </div>
             
             <div class="project-card">
-                <div class="project-icon">馃摫</div>
-                <h3>闂查奔鍔╂墜灏忕▼搴?/h3>
-                <p>寰俊灏忕▼搴忥紝鍖呭惈鍟嗗搧鎼滅储銆佹暟鎹彲瑙嗗寲銆佷环鏍肩洃鎺х瓑鍔熻兘銆?/p>
+                <div class="project-icon">📱</div>
+                <h3>闲鱼助手小程序</h3>
+                <p>微信小程序，包含商品搜索、数据可视化、价格监控等功能。</p>
                 <div class="project-tags">
-                    <span class="tag">寰俊灏忕▼搴?/span>
+                    <span class="tag">微信小程序</span>
                     <span class="tag">Flask</span>
                     <span class="tag">WebSocket</span>
                 </div>
@@ -296,7 +296,7 @@
     </section>
     
     <footer>
-        <p>鐢?馃惐 MIAO 绮惧績鍒朵綔 | <a href="https://github.com/zyimingch/miaoke-lab">GitHub</a></p>
+        <p>由 🐱 MIAO 精心制作 | <a href="https://github.com/zyimingch/miaoke-lab">GitHub</a></p>
     </footer>
 </body>
 </html>
